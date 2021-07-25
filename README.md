@@ -1,4 +1,4 @@
 # WormyTheWorm
 Fullstack Cyber Bootcamp Project
 
-Project Prop done, next step finish test environment Saturday 7/24.
+Project Prop and Test Environment done, MVP in progress.
