@@ -5,13 +5,13 @@ import paramiko
 # references = https://www.kite.com/python/answers/how-to-ssh-into-a-server-in-python & https://support.sciencelogic.com/s/article/1440
 
 # set variables to be interpreted by paramiko sshclient (host, port, username, password)
-host = ""
+host ="10.0.0.94"
 port = 22
-username = ""
-password = ""
+username = "stephen"
+password = "stephen"
 
 #define command variable
-command = "cd ~/Desktop; touch 'WormyWasHere'"
+command = "mkdir Wormy; cd ~/Wormy; touch 'WormyWasHere'"
 
 # define client/ssh variable to call sshclient
 ssh = paramiko.SSHClient()
@@ -25,3 +25,4 @@ stdin, stdout, stderr = ssh.exec_command(command)
 #return stdout
 for lines in stdout: 
     print(line)
+
