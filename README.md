@@ -1,21 +1,21 @@
 # WormyTheWorm
 ___
 
-### Summary: 
+## Summary: 
 > A Python worm that scans & infects a given subnet. 
 > Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
 
-### Table of Contents
+## Table of Contents
 - Dependents (imports - paramiko, nmap, scp)
 - NMap (defining a subnet, why port 22, first for loop = host list)
 - Brute Force (Defining wordlists - using own or rockyou etc)
 - Paramiko (looping through usernames & passwords, connecting via ssh, executing bash)
-- SSH
-- Try / Except
-- SCP (transfering file from host using GET)
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - SSH
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Try / Except
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - SCP (transfering file from host using GET)
+___
 ## Dependents 
-&NewLine;
+&NewLine; 
 ```sh
 import nmap
 import paramiko
@@ -41,6 +41,7 @@ pip install paramiko
 ```sh
 pip install git+https://github.com/jbardin/scp.py
 ```
+
 ## NMap
 
 NMap is used to scan a given subnet & return all host IPs on the network. 
