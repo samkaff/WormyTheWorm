@@ -41,3 +41,25 @@ pip install paramiko
 ```sh
 pip install git+https://github.com/jbardin/scp.py
 ```
+## NMap
+
+NMap is used to scan a given subnet & return all host IPs on the network. 
+
+**NMap Explained**
+
+1. A variable is defined that calls the port scanner method. 
+2. **The target subnet is identified - the default port will always be 22 for SSH utilization.**
+3. The command line method is initialized. 
+```sh
+nmScan = nmap.PortScanner()
+nmScan.scan('10.0.0.0/24', '22')
+nmScan.command_line()
+```
+1. A list called "networkhosts" is defined, which will contain the IPv4 addresses located on the subnet. 
+2. A for loop is intialized. This loop iterates through all hosts & stores them via the append method in "networkhosts", defined above. 
+```sh
+networkhosts = []
+for host in nmScan.all_hosts():
+    networkhosts.append(host)
+print(networkhosts)
+```
