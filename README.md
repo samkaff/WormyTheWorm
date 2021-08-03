@@ -10,12 +10,12 @@ ___
 - NMap (defining a subnet, why port 22, first for loop = host list)
 - Brute Force (Defining wordlists - using own or rockyou etc)
 - Paramiko (looping through usernames & passwords, connecting via ssh, executing bash)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - SSH
+&NewLine;&nbsp;&nbsp;&nbsp;&nbsp; - SSH
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Try / Except
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - SCP (transfering file from host using GET)
 
 ## Dependents 
-&NewLine; 
+&NewLine;
 ```sh
 import nmap
 import paramiko
