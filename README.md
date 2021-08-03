@@ -57,10 +57,28 @@ nmScan.scan('10.0.0.0/24', '22')
 nmScan.command_line()
 ```
 1. A list called "networkhosts" is defined, which will contain the IPv4 addresses located on the subnet. 
-2. A for loop is intialized. This loop iterates through all hosts & stores them via the append method in "networkhosts", defined above. 
+2. A "for" loop is intialized. This loop iterates through all hosts & stores them via the append method in "networkhosts", defined above. 
 ```sh
 networkhosts = []
 for host in nmScan.all_hosts():
     networkhosts.append(host)
 print(networkhosts)
+```
+
+## Brute Force 
+
+The brute force method of username / password cracking takes predefined wordlists & runs all possible combinations against a log-in barrier. The size of the wordlist will effect the success rate, but increased wordlist length corelates to an increase in time. In our example code, small wordlists of four usernames & four passwords are defined for the sake of time, but could be substituted for a longer list (such as rockyou.txt) using the path provided below: 
+```sh
+/usr/share/wordlists/rockyou.txt
+```
+The variables used by SSH/Paramiko (explained in further section) are defined in a "for" loop that will ultimately iterate through each host previously amended to "networkhosts". 
+```sh
+for element in networkhosts:
+    host = element
+    port = 22
+```
+The wordlists referenced above are also defined. 
+```sh
+usernames = ['sam','gavin','stephen','devon']
+passwords = ['admin','stephen','penelope','password']
 ```
