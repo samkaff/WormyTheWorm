@@ -82,3 +82,22 @@ The wordlists referenced above are also defined.
 usernames = ['sam','gavin','stephen','devon']
 passwords = ['admin','stephen','penelope','password']
 ```
+## SSH & Paramiko
+
+Paramiko is Python implementation of SSHv2 proctocol and is the crux of WormyTheWorm's ability to infiltrate hosts on a local network. 
+
+First, two subsequent "for" loops utilize the word lists defined in the "Brute Force" section above. Each "for" loop combination contains a different combination of "users" & "pwords", and SSH is attempted via Paramiko using each one. The variables "username" and "password", which are native to Paramiko, are defined. 
+
+```sh
+for user in usernames:
+        for pword in passwords:
+            username = user
+            password = pword
+```
+Next, the "command" variable is defined. This sequence is executed via the target machine's command line once SSH connection is established. This command in particular performs the following:
+1. WormyTheWorm is executed.
+2. A file called "WormyWuzHere" is created. 
+3. The line "Haha no code for you" is written to the file above. 
+4. WormyTheWorm is deleted
+```sh
+command = "./WormyTheWorm && touch 'WormyWuzHere' && echo 'Haha no code for you :)' > WormyWuzHere && rm WormyTheWorm"
