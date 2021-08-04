@@ -94,7 +94,7 @@ for user in usernames:
             password = pword
 ```
 Next, the "command" variable is defined. This sequence is executed via the target machine's command line once SSH connection is established. This command in particular performs the following:
-1. WormyTheWorm is executed.
+1. WormyTheWorm is executed - this is how the worm replicates. Identical code will be executed on the target machine, and the process will begin anew. 
 2. A file called "WormyWuzHere" is created. 
 3. The line "Haha no code for you :)" is written to the file above. 
 4. WormyTheWorm is deleted
