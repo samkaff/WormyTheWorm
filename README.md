@@ -6,13 +6,12 @@ ___
 > Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
 
 ## Table of Contents
-- Dependents (imports - paramiko, nmap, scp)
-- NMap (defining a subnet, why port 22, first for loop = host list)
-- Brute Force (Defining wordlists - using own or rockyou etc)
-- Paramiko (looping through usernames & passwords, connecting via ssh, executing bash)
-- SSH
-- Try / Except
-- SCP (transfering file from host using GET)
+- Dependents
+- NMap 
+- Brute Force 
+- SSH & Paramiko
+- Initializing & Executing Paramiko
+- SCP 
 ___
 ## Dependents 
 &NewLine; 
@@ -82,6 +81,7 @@ The wordlists referenced above are also defined.
 usernames = ['sam','gavin','stephen','devon']
 passwords = ['admin','stephen','penelope','password']
 ```
+
 ## SSH & Paramiko
 
 Paramiko is Python implementation of SSHv2 proctocol and is the crux of WormyTheWorm's ability to infiltrate hosts on a local network. 
@@ -97,7 +97,13 @@ for user in usernames:
 Next, the "command" variable is defined. This sequence is executed via the target machine's command line once SSH connection is established. This command in particular performs the following:
 1. WormyTheWorm is executed.
 2. A file called "WormyWuzHere" is created. 
-3. The line "Haha no code for you" is written to the file above. 
+3. The line "Haha no code for you :)" is written to the file above. 
 4. WormyTheWorm is deleted
 ```sh
 command = "./WormyTheWorm && touch 'WormyWuzHere' && echo 'Haha no code for you :)' > WormyWuzHere && rm WormyTheWorm"
+```
+The first line of the code below creates a new SSHCLient, and the second line allows the script to SSH to a remote server with unknown SSH keys. 
+```sh
+ssh = paramiko.SSHClient()
+            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()
+```
