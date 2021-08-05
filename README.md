@@ -135,4 +135,5 @@ Within the "except block" the following occurs:
         print(host + ' Timeout :(')
 ```
 A log of the successes and timeouts for the username/password combinations on each of the target machines will be printed out nicely on the command line. The image below shows a portion of that log:
+
 ![output log](./logoutput.png)
