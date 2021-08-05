@@ -34,7 +34,7 @@ sudo apt-get install nmap
 ```
 **Requirements:**
 
-Download the configuration file called **requirements.txt** from this repository. Move it to your current directory, then run the following command:
+Download the configuration file called **requirements.txt** from this repository, move it to your current directory, then run the following command:
 ```sh
 pip install -r requirements.txt
 ```
