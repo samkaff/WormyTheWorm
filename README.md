@@ -140,6 +140,7 @@ Within the "except block" the following occurs:
 
 After the script runs, the ```ls``` command on the target machine's terminal will show if the attack was successful. If it was, "WormyTheWorm" will be included in the output. (```ls``` shows all of the files in the current directory; right after a login, ```ls``` refers to the home directory).
 
+![wormy ls](./lswithwormy.png)
 
 The command line shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log:
 
