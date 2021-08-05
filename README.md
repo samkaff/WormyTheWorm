@@ -10,7 +10,7 @@ ___
 - NMap 
 - Brute Force 
 - SSH & Paramiko
-- Try Except - SSH & SCP via Paramiko
+- Try/Except - SSH & SCP via Paramiko
 ___
 ## Dependents 
 &NewLine; 
@@ -106,7 +106,7 @@ The first line of the code below creates a new SSHCLient, and the second line al
 ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()
 ```
-## Try Except - SSH & SCP via Paramiko
+## Try/Except - SSH & SCP via Paramiko
 
 A "try block" & an "except block" are used to set a timeout limit & an appropriate response, to increase the speed of Wormy as a whole. 
 
