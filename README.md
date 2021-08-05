@@ -142,6 +142,6 @@ The command line shows us a log of each attempt to **gain access to a target usi
 
 ![output log](./shortoutput.png)
 
-As we can see, after the success on 10.0.0.154, Wormy attempts to brute force 10.0.0.188, the next target.
+After the success on 10.0.0.154, Wormy attempts to brute force 10.0.0.188, the next target.
 
 
