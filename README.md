@@ -148,9 +148,10 @@ After the script runs, the ```ls``` command on the target machines' terminals wi
 
 ![wormy ls](./lswithwormy.png)
 
-Once WormyTheWorm copies itself onto another machine, it will automatically run again. Once it finishes, it will remove itself from the machine, and leave "WormyWuzHere behind. Once again, ```ls``` will show if the script successfully ran on .
+Once WormyTheWorm copies itself onto another machine, it will automatically run again. Once it finishes, it will remove itself from the machine, and create "WormyWuzHere" in the same directory. Once again, ```ls``` will show if the script successfully ran on.
 
 ![wormy's tracks](./wormtracks.png)
+
 
 
 
