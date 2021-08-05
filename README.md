@@ -20,9 +20,7 @@ import paramiko
 import sys
 from scp import SCPClient
 ```
-[click on this link](#my-multi-word-header)
 
-### My Multi Word Header
 The above must be installed on the local machine for the program to run successfully. Use the below code to install each successfully. 
 
 **Pip:**
