@@ -32,6 +32,8 @@ sudo apt install python3-pip
 ```sh
 sudo apt-get install nmap
 ```
+**Requirements**
+
 Download the configuration file from this repository called "requirements.txt" and make sure it's in your current directory, then run the following command:
 ```sh
 pip install -r requirements.txt
