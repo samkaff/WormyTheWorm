@@ -138,8 +138,10 @@ Within the "except block" the following occurs:
 
 ## Verifying Output
 
-A log of the successes and timeouts for the username/password combinations on each of the target machines will be printed out nicely on the command line. The image below shows a portion of that log:
+The command line shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log:
 
 ![output log](./shortoutput.png)
 
-As we can see, after the success on 10.0.0.154, Wormy moves on to the next target, 10.0.0.188 and 
+As we can see, after the success on 10.0.0.154, Wormy attempts to brute force 10.0.0.188, the next target.
+
+
