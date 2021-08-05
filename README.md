@@ -11,7 +11,7 @@ ___
 - [Brute Force](#brute-force) 
 - [SSH and Paramiko](#ssh-and-paramiko)
 - [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
-- [Verifying Output](#verifying-output)
+- [Output](#output)
 ___
 ## Dependents 
 &NewLine; 
@@ -136,7 +136,7 @@ Within the "except block" the following occurs:
         print(host + ' Timeout :(')
 ```
 
-## Verifying Output
+## Output
 
 The command line on the attacker's machine shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log.
 
@@ -151,6 +151,8 @@ After the script runs, the ```ls``` command on the target machines' terminals wi
 Once WormyTheWorm copies itself onto another machine, it will automatically run again. Once it finishes, it will remove itself from the machine, and leave "WormyWuzHere behind. Once again, ```ls``` will show if the script successfully ran on .
 
 ![wormy's tracks](./wormtracks.png)
+
+
 
 
 
