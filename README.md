@@ -7,12 +7,12 @@ ___
 
 ## Table of Contents
 - [Dependents](#dependents)
-- NMap 
-- Brute Force 
-- SSH & Paramiko
+- [NMAP](#nmap)
+- [Brute Force](#brute-force) 
+- [SSH & Paramiko](#ssh-&-paramiko)
 - Try/Except - SSH & SCP via Paramiko
 ___
-### Dependents 
+## Dependents 
 &NewLine; 
 ```sh
 import nmap
