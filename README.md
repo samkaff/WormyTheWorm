@@ -22,7 +22,7 @@ import sys
 from scp import SCPClient
 ```
 
-The functions above must be installed on the local machine for the program to run successfully. Use the below code to install each successfully. 
+The functions above must be installed on the local machine for the program to run successfully. Run the 3 commands below to install each successfully. 
 
 **Pip:**
 ```sh
@@ -31,15 +31,10 @@ sudo apt install python3-pip
 **NMap:**
 ```sh
 sudo apt-get install nmap
-pip install python-nmap
 ```
-**Paramiko:**
+Download the configuration file from this repository called "requirements.txt" and make sure it's in your current directory, then run the following command:
 ```sh
-pip install paramiko
-```
-**SCP:**
-```sh
-pip install git+https://github.com/jbardin/scp.py
+pip install -r requirements.txt
 ```
 
 ## NMap
