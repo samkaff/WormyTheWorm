@@ -2,7 +2,7 @@
 ___
 
 ## Summary: 
-> A Python worm that scans & infects a given subnet. 
+> A Python worm that scans & infects a given subnet while replicating itself. 
 > Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
 
 ## Table of Contents
@@ -11,6 +11,7 @@ ___
 - [Brute Force](#brute-force) 
 - [SSH and Paramiko](#ssh-and-paramiko)
 - [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
+- [Verifying Output] (#verifying-output)
 ___
 ## Dependents 
 &NewLine; 
@@ -134,6 +135,11 @@ Within the "except block" the following occurs:
  except:
         print(host + ' Timeout :(')
 ```
+
+## Verifying Output
+
 A log of the successes and timeouts for the username/password combinations on each of the target machines will be printed out nicely on the command line. The image below shows a portion of that log:
 
 ![output log](./shortoutput.png)
+
+As we can see, after the success on 10.0.0.154, Wormy moves on to the next target, 10.0.0.188 and 
