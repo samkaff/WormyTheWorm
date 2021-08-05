@@ -6,14 +6,14 @@ ___
 > Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
 
 ## Table of Contents
-- [Dependents](#dependents)
+- [Dependencies](#dependencies)
 - [NMAP](#nmap)
 - [Brute Force](#brute-force) 
 - [SSH and Paramiko](#ssh-and-paramiko)
 - [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
 - [Output](#output)
 ___
-## Dependents 
+## Dependencies 
 &NewLine; 
 ```sh
 import nmap
