@@ -138,7 +138,7 @@ Within the "except block" the following occurs:
 
 ## Verifying Output
 
-After the script runs, the ```sh ls ``` 
+After the script runs, the ```ls``` 
 
 
 The command line shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log:
