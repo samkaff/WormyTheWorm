@@ -64,6 +64,7 @@ for host in nmScan.all_hosts():
 print(networkhosts)
 ```
 3. "networkhosts" is printed out on the command line, showing us the list of IPv4 addresses on our subnet.
+
 ![IPs on the subnet](./printedipv4.png)
 
 ## Brute Force 
