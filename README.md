@@ -9,7 +9,7 @@ ___
 - [Dependents](#dependents)
 - [NMAP](#nmap)
 - [Brute Force](#brute-force) 
-- [SSH and Paramiko](#ssh)
+- [SSH and Paramiko](#ssh-and-paramiko)
 - [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
 ___
 ## Dependents 
