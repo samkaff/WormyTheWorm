@@ -138,14 +138,16 @@ Within the "except block" the following occurs:
 
 ## Verifying Output
 
-After the script runs, the ```ls``` command on the target machine's terminal will show if the attack was successful. If it was, "WormyTheWorm" will be included in the output. (```ls``` shows all of the files in the current directory; right after a login, ```ls``` refers to the home directory).
-
-![wormy ls](./lswithwormy.png)
-
-The command line shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log:
+The command line on the attacker's machine shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log:
 
 ![output log](./shortoutput.png)
 
 After the success on 10.0.0.154, Wormy attempts to brute force 10.0.0.188, the next target.
+
+After the script runs, the ```ls``` command on the target machine's terminal will show if the attack was successful. If it was, "WormyTheWorm" will be included in the output. (```ls``` shows all of the files in the current directory; right after a login, ```ls``` refers to the home directory).
+
+![wormy ls](./lswithwormy.png)
+
+
 
 
