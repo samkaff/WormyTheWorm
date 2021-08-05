@@ -63,6 +63,8 @@ for host in nmScan.all_hosts():
     networkhosts.append(host)
 print(networkhosts)
 ```
+3. "networkhosts" is printed out on the command line, showing us the list of IPv4 addresses on our subnet.
+![IPs on the subnet](./printedips)
 
 ## Brute Force 
 
