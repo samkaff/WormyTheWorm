@@ -84,7 +84,7 @@ passwords = ['admin','stephen','penelope','password']
 
 ## SSH & Paramiko
 
-Paramiko is Python implementation of SSHv2 proctocol and is the crux of WormyTheWorm's ability to infiltrate hosts on a local network. 
+Paramiko is Python's implementation of SSHv2 proctocol and is the crux of WormyTheWorm's ability to infiltrate hosts on a local network. 
 
 First, two subsequent "for" loops utilize the word lists defined in the "Brute Force" section above. Each "for" loop combination contains a different combination of "users" & "pwords", and SSH is attempted via Paramiko using each one. The variables "username" and "password", which are native to Paramiko, are defined. 
 
