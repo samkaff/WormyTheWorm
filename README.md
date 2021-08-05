@@ -11,7 +11,7 @@ ___
 - [Brute Force](#brute-force) 
 - [SSH and Paramiko](#ssh-and-paramiko)
 - [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
-- [Verifying Output] (#verifying-output)
+- [Verifying Output](#verifying-output)
 ___
 ## Dependents 
 &NewLine; 
