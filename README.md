@@ -6,7 +6,7 @@ ___
 > Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
 
 ## Table of Contents
-- Dependents [##Dependents]
+- Dependents [#dependents]
 - NMap 
 - Brute Force 
 - SSH & Paramiko
