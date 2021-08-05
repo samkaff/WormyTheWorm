@@ -9,8 +9,8 @@ ___
 - [Dependents](#dependents)
 - [NMAP](#nmap)
 - [Brute Force](#brute-force) 
-- [SSH & Paramiko](#ssh)
-- [Try/Except - SSH & SCP via Paramiko](#Try/Except---SSH-&-SCP-via-Paramiko)
+- [SSH and Paramiko](#ssh)
+- [Try/Except loop for SSH & SCP via Paramiko](#try-except-loop-for-SSH-and-SCP-via-Paramiko)
 ___
 ## Dependents 
 &NewLine; 
@@ -82,7 +82,7 @@ usernames = ['sam','gavin','stephen','devon']
 passwords = ['admin','stephen','penelope','password']
 ```
 
-## SSH & Paramiko
+## SSH and Paramiko
 
 Paramiko is Python's implementation of SSHv2 proctocol and is the crux of WormyTheWorm's ability to infiltrate hosts on a local network. 
 
@@ -107,7 +107,7 @@ The first line of the code below creates a new SSHCLient, and the second line al
 ssh = paramiko.SSHClient()
             ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()
 ```
-## Try/Except - SSH & SCP via Paramiko
+## Try Except loop for SSH and SCP via Paramiko
 
 A "try block" & an "except block" are used to set a timeout limit & an appropriate response, to increase the speed of Wormy as a whole. 
 
