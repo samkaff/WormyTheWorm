@@ -22,7 +22,7 @@ import sys
 from scp import SCPClient
 ```
 
-The above must be installed on the local machine for the program to run successfully. Use the below code to install each successfully. 
+The functions above must be installed on the local machine for the program to run successfully. Use the below code to install each successfully. 
 
 **Pip:**
 ```sh
