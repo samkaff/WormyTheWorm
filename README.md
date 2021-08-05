@@ -140,7 +140,7 @@ Within the "except block" the following occurs:
 
 The command line on the attacker's machine shows us a log of each attempt to **gain access to a target using a specific username and password combination.** The image below shows a portion of that log.
 
-![output log](./shortoutput.png)
+![output log](./log.png)
 
 After the success on 10.0.0.154, Wormy attempts to brute force 10.0.0.188, the next target.
 
