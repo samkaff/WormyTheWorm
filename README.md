@@ -3,7 +3,7 @@ ___
 
 ## Summary: 
 > A Python worm that scans & infects a given subnet while replicating itself. 
-> Below is a breakdown of the code, including screenshots & descriptions of the processes used. 
+> Below is a breakdown of the code, including screenshots & descriptions of the processes used. (WormyTheWorm.py)
 
 ## Table of Contents
 - [Dependencies](#dependencies)
