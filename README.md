@@ -99,10 +99,9 @@ Next, the "command" variable is defined. This sequence is executed via the targe
 
  1. First, it checks to see if the machine has been infected by looking for a hidden file called ".WormyIsHiding" that is created by the script below.
  2. ".WormyIsHiding", a hidden file, is created on the target machine.
- 3. WormyTheWorm is executed - this is how the worm replicates. Identical code will be executed on the target machine, and the process will begin anew. 
- 4. A file called "WormyWuzHere" is created. 
-. The line "Haha no code for you :)" is written to the file above. 
-9. WormyTheWorm gets deleted.
+ 3. A file called "WormyWuzHere" is created containing the following text: "Haha no code for you :)".
+ 4. WormyTheWorm is executed - this is how the worm replicates. Identical code will be executed on the target machine, and the process will begin anew. 
+ 5. WormyTheWorm removes itself.
 ```sh
 command = "if [ ! -f .WormyIsHiding ]; then touch .WormyIsHiding && touch 'WormyWuzHere' && echo 'Haha no code for you :)' > WormyWuzHere && ./WormyTheWorm 2> /tmp/output.log; fi && rm -f WormyTheWorm"
 ```
