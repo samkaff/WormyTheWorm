@@ -96,12 +96,12 @@ for user in usernames:
             password = pword
 ```
 Next, the "command" variable is defined. This sequence is executed via the target machine's command line once SSH connection is established. This command in particular performs the following:
+
  First, it checks to see if the machine has been infected by looking for a hidden file called ".WormyIsHiding" that is created by the script below.
  **The next few commands will only get executed if the hidden file is not present on the machine.**
  
-4. ".WormyIsHiding", a hidden file, is created on the target machine.
-5. 
-6. WormyTheWorm is executed - this is how the worm replicates. Identical code will be executed on the target machine, and the process will begin anew. 
+ 1. ".WormyIsHiding", a hidden file, is created on the target machine.
+ 2. WormyTheWorm is executed - this is how the worm replicates. Identical code will be executed on the target machine, and the process will begin anew. 
 7. A file called "WormyWuzHere" is created. 
 8. The line "Haha no code for you :)" is written to the file above. 
 9. WormyTheWorm gets deleted.
